@@ -5,9 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bank App</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 </head>
 <body>
-    
+    <div class="container">
+        <div class="row mt-5">
+            <div class="card bg-info-subtle" style="width: 18rem;">
+                <div class="card-body">
+                  
+                  <p class="card-text">Account Number:</p>
+                  <p class="card-text">Owner Name:</p>
+                  <p class="card-text">Balance:</p>
+                  
+                </div>
+              </div>
+              <div class="row mt-5">
+                <div class="card bg-info-subtle me-5" style="width: 25rem;">
+                    <div class="card-body">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Enter Deposit Amounts" aria-label="Recipient's username" aria-describedby="button-addon2">
+                            <button class="btn btn-outline-secondary" type="button" id="button-addon2">Deposit</button>
+                          </div>
+                                                
+                    </div>
+                  </div>
+                  <div class="card bg-info-subtle" style="width: 25rem;">
+                    <div class="card-body">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Enter Withdrawal Amounts" aria-label="Recipient's username" aria-describedby="button-addon2">
+                            <button class="btn btn-outline-secondary" type="button" id="button-addon2">Withdrawal</button>
+                          </div>                      
+                    </div>
+                  </div>
+              </div>
+        </div>
+    </div>
+
+
+    <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/bank_app.js"></script>
 </body>
 </html>
