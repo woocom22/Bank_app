@@ -13,68 +13,41 @@
         <div class="row mt-5">
             <div class="card bg-info-subtle me-5" style="width: 18rem;">
                 <div class="card-body BankAccount">
-                  
-                  <p class="card-text">Account Number:</p>
-                  <p class="card-text">Owner Name:</p>
-                  <p class="card-text">Balance:</p>
-                  
+                  <span>Account Number:</span>
+                  <p class="card-text" id="currentAcc"></p><br>
+                  <span>Owner Name:</span>
+                  <p class="card-text" id="currentOwner"></p><br>
+                  <span>Balance:</span>
+                  <p class="card-text" id="currentBl"></p><br>
                 </div>
               </div>
               <div class="card bg-info-subtle" style="width: 18rem;">
-                <div class="card-body openBankAccount">
-
-           
-                    <!-- Button trigger modal -->
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                  Add Bank Account
-                </button>
-
-                  <!-- Modal -->
-                  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                      <div class="modal-content">
-                        <form action="">
+                <div class="card-body openBankAccount">     
                         <div class="modal-header">
                           <h1 class="modal-title fs-5" id="exampleModalLabel">Add Bank Details</h1>
-                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                          <div class="input-group input-group-sm mb-3">
-                            <span class="input-group-text" id="inputGroup-sizing-sm">Account Number</span>
-                            <input type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-                          </div>
-                          <div class="input-group input-group-sm mb-3">
-                            <span class="input-group-text" id="inputGroup-sizing-sm">Owner Name</span>
-                            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-                          </div>
-                          <div class="input-group input-group-sm mb-3">
-                            <span class="input-group-text" id="inputGroup-sizing-sm">Amount</span>
-                            <input type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-                          </div>
-                                                                              
+                            <span class="input-group-text" id="inputGroup-sizing-sm newNumber">Account Number</span>
+                            <input type="number"  id="AccNumber" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                          
+                            <span class="input-group-text" id="inputGroup-sizing-sm newOwnerName">Owner Name</span>
+                            <input type="text"  id="newOwner" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                          
+                            <span class="input-group-text" id="inputGroup-sizing-sm newAmount">Amount</span>
+                            <input type="number" id="addAm" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">                                                    
                         </div>
                         <div class="modal-footer">
-                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                          <button type="button" class="btn btn-primary">Add Account</button>
+                          <button  id="addNewAcc" class="btn btn-success">Add Account</button>
                         </div>
-                      </form>
                       </div>
                     </div>
-                  </div>
-                  
-
-                </div>
-              </div>
-            </div>
-              
               <div class="row mt-5">
                 <div class="card bg-info-subtle me-5" style="width: 25rem;">
                     <div class="card-body deposit">
                         <div class="input-group mb-3">
                             <input type="text" class="form-control" placeholder="Enter Deposit Amounts" aria-label="Deposit" aria-describedby="button-addon2">
                             <button class="btn btn-outline-secondary" type="button" id="button-addon2">Deposit</button>
-                          </div>
-                                                
+                          </div>                      
                     </div>
                   </div>
                   <div class="card bg-info-subtle" style="width: 25rem;">
@@ -86,16 +59,8 @@
                     </div>
                   </div>
               </div>
-        
     </div>
-    <script>
-        const myModal = document.getElementById('myModal')
-        const myInput = document.getElementById('myInput')
-
-        myModal.addEventListener('shown.bs.modal', () => {
-          myInput.focus()
-        })
-    </script>
+    
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/bank_app.js"></script>
     <script src="assets/js/popper.min.js"></script>
